@@ -132,7 +132,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   justify-content: space-between;
 }
 
-/* ── LOGO FIX: fondo contenedor para contraste ── */
+/* ── LOGO (PNG con fondo transparente) ── */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -141,9 +141,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   height: 52px;
   width: auto;
   object-fit: contain;
-  /* Recorta el fondo negro del PNG con mix-blend */
-  mix-blend-mode: lighten;
-  filter: brightness(1.15) drop-shadow(0 0 8px rgba(26,109,255,.3));
+  filter: drop-shadow(0 0 6px rgba(26,109,255,.25));
 }
 
 .nav-links {
@@ -612,14 +610,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .footer-top { padding: 72px 0 48px; }
 .footer-grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1.2fr; gap: 48px; }
 
-/* ── FOOTER LOGO FIX ── */
+/* ── FOOTER LOGO ── */
 .footer-brand img.footer-logo {
   height: 48px;
   width: auto;
   object-fit: contain;
   margin-bottom: 16px;
-  mix-blend-mode: lighten;
-  filter: brightness(1.2) drop-shadow(0 0 6px rgba(26,109,255,.25));
+  filter: drop-shadow(0 0 6px rgba(26,109,255,.2));
 }
 
 .footer-brand > p { font-size: .85rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.7; max-width: 260px; }
