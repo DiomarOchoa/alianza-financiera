@@ -131,7 +131,21 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   align-items: center;
   justify-content: space-between;
 }
-.nav-logo img { height: 48px; width: auto; object-fit: contain; }
+
+/* ── LOGO FIX: fondo contenedor para contraste ── */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+.nav-logo img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  /* Recorta el fondo negro del PNG con mix-blend */
+  mix-blend-mode: lighten;
+  filter: brightness(1.15) drop-shadow(0 0 8px rgba(26,109,255,.3));
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -308,12 +322,22 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .tag { font-size: .78rem; font-weight: 600; padding: 4px 10px; border-radius: 50px; }
 .tag.positive { background: rgba(34,197,94,.15); color: var(--green); }
 .card-amount { font-family: var(--font-head); font-size: 1.25rem; font-weight: 700; }
+
+/* ── MINI CARDS: sin animación de float (causaba titilado) ── */
 .mini-card {
   display: flex;
   align-items: center;
   gap: 14px;
   padding: 14px 18px;
   border-radius: var(--radius-sm);
+  /* will-change evita repaints innecesarios */
+  will-change: transform;
+  transform: translateZ(0);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.mini-card:hover {
+  transform: translateY(-3px) translateZ(0);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
 }
 .mini-card i { font-size: 1.2rem; color: var(--blue); flex-shrink: 0; }
 .mini-card div { flex: 1; }
@@ -322,10 +346,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .badge { font-size: .7rem; font-weight: 700; padding: 2px 8px; border-radius: 50px; }
 .badge.success { background: rgba(34,197,94,.2); color: var(--green); }
 .badge.warning { background: rgba(245,158,11,.2); color: var(--amber); }
-.mc-1 { animation: float1 4s ease-in-out infinite; }
-.mc-2 { animation: float2 4.5s ease-in-out infinite; }
-@keyframes float1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
-@keyframes float2 { 0%,100%{transform:translateY(-4px)} 50%{transform:translateY(4px)} }
 
 /* ── TRUST BAR ── */
 .trust-bar {
@@ -591,7 +611,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .footer { background: var(--bg); border-top: 1px solid var(--border); }
 .footer-top { padding: 72px 0 48px; }
 .footer-grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1.2fr; gap: 48px; }
-.footer-brand img.footer-logo { height: 42px; width: auto; object-fit: contain; margin-bottom: 16px; filter: brightness(1.1); }
+
+/* ── FOOTER LOGO FIX ── */
+.footer-brand img.footer-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 16px;
+  mix-blend-mode: lighten;
+  filter: brightness(1.2) drop-shadow(0 0 6px rgba(26,109,255,.25));
+}
+
 .footer-brand > p { font-size: .85rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.7; max-width: 260px; }
 .footer-col h4 { font-family: var(--font-head); font-size: .9rem; font-weight: 700; margin-bottom: 16px; color: var(--text); }
 .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
