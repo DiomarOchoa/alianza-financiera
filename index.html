@@ -1,90 +1,450 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alianza Financiera S.A.S</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alianza Financiera S.A.S – Contabilidad & Asesoría Financiera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">💼 Alianza Financiera</div>
-
-        <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-
-        <div class="menu-toggle">☰</div>
-    </nav>
-</header>
-
-<!-- HERO -->
-<section id="inicio" class="hero">
-    <div class="hero-content">
-        <h1>Impulsamos tu crecimiento financiero 📈</h1>
-        <p>Expertos en contabilidad, impuestos y asesoría empresarial</p>
-        <a href="#contacto" class="btn">Solicitar asesoría</a>
+  <!-- ░░░ NAVBAR ░░░ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">
+        <img src="logo.png" alt="Alianza Financiera S.A.S" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#proceso" class="nav-link">Proceso</a></li>
+        <li><a href="#contacto" class="nav-link nav-cta">Contacto</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-</section>
+  </nav>
 
-<!-- SERVICIOS -->
-<section id="servicios">
-    <h2>Nuestros Servicios</h2>
-
-    <div class="cards">
-        <div class="card">
-            <h3>📊 Contabilidad</h3>
-            <p>Registro y control financiero completo</p>
-        </div>
-
-        <div class="card">
-            <h3>💡 Asesoría</h3>
-            <p>Estrategias para mejorar tu empresa</p>
-        </div>
-
-        <div class="card">
-            <h3>🧾 Impuestos</h3>
-            <p>Declaraciones seguras y sin errores</p>
-        </div>
+  <!-- ░░░ HERO ░░░ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+      <div class="hero-grid"></div>
     </div>
-</section>
+    <div class="hero-content reveal">
+      <span class="hero-eyebrow"><i class="fas fa-shield-halved"></i> Expertos certificados en finanzas Colombia</span>
+      <h1 class="hero-title">
+        Tu empresa<br />
+        <span class="gradient-text">siempre al día</span><br />
+        con el fisco.
+      </h1>
+      <p class="hero-subtitle">Contabilidad precisa, asesoría tributaria estratégica y acompañamiento financiero para empresas que quieren crecer sin sorpresas.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">Solicitar consulta gratuita <i class="fas fa-arrow-right"></i></a>
+        <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong class="count" data-target="350">0</strong><span>+</span>
+          <small>Clientes activos</small>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <strong class="count" data-target="12">0</strong><span>+</span>
+          <small>Años de experiencia</small>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <strong class="count" data-target="98">0</strong><span>%</span>
+          <small>Satisfacción</small>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual reveal-right">
+      <div class="dashboard-card glass">
+        <div class="card-header">
+          <span class="card-dot green"></span>
+          <span class="card-label">Flujo de caja · 2024</span>
+          <i class="fas fa-ellipsis"></i>
+        </div>
+        <div class="chart-bars">
+          <div class="bar" style="--h:55%;--d:0s"><span>Ene</span></div>
+          <div class="bar" style="--h:70%;--d:.1s"><span>Feb</span></div>
+          <div class="bar" style="--h:45%;--d:.2s"><span>Mar</span></div>
+          <div class="bar" style="--h:80%;--d:.3s"><span>Abr</span></div>
+          <div class="bar" style="--h:65%;--d:.4s"><span>May</span></div>
+          <div class="bar active" style="--h:90%;--d:.5s"><span>Jun</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="tag positive"><i class="fas fa-arrow-trend-up"></i> +18.4%</span>
+          <span class="card-amount">$124.6M</span>
+        </div>
+      </div>
+      <div class="mini-card glass mc-1">
+        <i class="fas fa-file-invoice-dollar"></i>
+        <div>
+          <strong>Declaración IVA</strong>
+          <small>Enviada · hace 2h</small>
+        </div>
+        <span class="badge success">✓</span>
+      </div>
+      <div class="mini-card glass mc-2">
+        <i class="fas fa-bell"></i>
+        <div>
+          <strong>Vencimiento DIAN</strong>
+          <small>15 días restantes</small>
+        </div>
+        <span class="badge warning">!</span>
+      </div>
+    </div>
+  </section>
 
-<!-- NOSOTROS -->
-<section id="nosotros">
-    <h2>¿Quiénes somos?</h2>
-    <p>
-        En Alianza Financiera S.A.S ayudamos a empresas y personas a 
-        organizar sus finanzas, optimizar recursos y crecer de forma segura.
-    </p>
-</section>
+  <!-- ░░░ LOGOS / TRUST ░░░ -->
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <span>Cumplimos con:</span>
+      <div class="trust-logos">
+        <span><i class="fas fa-landmark"></i> DIAN</span>
+        <span><i class="fas fa-balance-scale"></i> NIIF / IFRS</span>
+        <span><i class="fas fa-building-columns"></i> Supersociedades</span>
+        <span><i class="fas fa-file-contract"></i> Cámara de Comercio</span>
+        <span><i class="fas fa-shield-halved"></i> Revisoría Fiscal</span>
+      </div>
+    </div>
+  </div>
 
-<!-- CONTACTO -->
-<section id="contacto">
-    <h2>Contáctanos</h2>
+  <!-- ░░░ SERVICIOS ░░░ -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Lo que hacemos</span>
+        <h2>Servicios financieros<br /><span class="gradient-text">de alto impacto</span></h2>
+        <p>Soluciones integrales para que te enfoques en hacer crecer tu negocio.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon"><i class="fas fa-book-open"></i></div>
+          <h3>Contabilidad General</h3>
+          <p>Registro, clasificación y análisis de todas tus operaciones contables. Estados financieros precisos y al día con la normativa colombiana.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Libros contables oficiales</li>
+            <li><i class="fas fa-check"></i> Balances y estados de resultados</li>
+            <li><i class="fas fa-check"></i> Conciliaciones bancarias</li>
+          </ul>
+          <a href="#contacto" class="service-link">Saber más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card featured reveal" data-delay="1">
+          <div class="featured-badge">Más solicitado</div>
+          <div class="service-icon"><i class="fas fa-percent"></i></div>
+          <h3>Asesoría Tributaria</h3>
+          <p>Optimización fiscal legal, declaraciones ante la DIAN y planificación tributaria para pagar exactamente lo que corresponde, ni un peso más.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Renta, IVA, ICA</li>
+            <li><i class="fas fa-check"></i> Retención en la fuente</li>
+            <li><i class="fas fa-check"></i> Recursos y litigios DIAN</li>
+          </ul>
+          <a href="#contacto" class="service-link">Saber más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="2">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Asesoría Financiera</h3>
+          <p>Análisis de rentabilidad, flujo de caja y estructuración financiera para que tomes decisiones estratégicas con información sólida.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Proyecciones y presupuestos</li>
+            <li><i class="fas fa-check"></i> Análisis de indicadores</li>
+            <li><i class="fas fa-check"></i> Valoración de empresas</li>
+          </ul>
+          <a href="#contacto" class="service-link">Saber más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="3">
+          <div class="service-icon"><i class="fas fa-users"></i></div>
+          <h3>Nómina & RRHH</h3>
+          <p>Liquidación de nómina, seguridad social, prestaciones y todo lo relacionado con el talento humano de tu empresa.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Liquidación mensual</li>
+            <li><i class="fas fa-check"></i> Seguridad social PILA</li>
+            <li><i class="fas fa-check"></i> Contratos y liquidaciones</li>
+          </ul>
+          <a href="#contacto" class="service-link">Saber más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="4">
+          <div class="service-icon"><i class="fas fa-gavel"></i></div>
+          <h3>Revisoría Fiscal</h3>
+          <p>Control independiente de la gestión financiera de tu empresa bajo los más altos estándares éticos y profesionales.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Dictámenes e informes</li>
+            <li><i class="fas fa-check"></i> Control interno</li>
+            <li><i class="fas fa-check"></i> Auditoría de estados financieros</li>
+          </ul>
+          <a href="#contacto" class="service-link">Saber más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="5">
+          <div class="service-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Creación de Empresas</h3>
+          <p>Acompañamiento completo para constituir tu empresa: cámara de comercio, RUT, cuenta bancaria y estructura tributaria desde cero.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Registro mercantil</li>
+            <li><i class="fas fa-check"></i> Estatutos y minutas</li>
+            <li><i class="fas fa-check"></i> Régimen tributario óptimo</li>
+          </ul>
+          <a href="#contacto" class="service-link">Saber más <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <form id="form">
-        <input type="text" placeholder="Nombre" required>
-        <input type="email" placeholder="Correo" required>
-        <textarea placeholder="Mensaje"></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-</section>
+  <!-- ░░░ NOSOTROS ░░░ -->
+  <section class="section about-section" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal-left">
+          <div class="about-img-wrap glass">
+            <div class="about-accent"></div>
+            <div class="about-numbers">
+              <div class="about-num-card">
+                <strong>$2.8B</strong>
+                <small>En activos gestionados</small>
+              </div>
+              <div class="about-num-card">
+                <strong>350+</strong>
+                <small>Empresas asesoradas</small>
+              </div>
+              <div class="about-num-card">
+                <strong>12</strong>
+                <small>Años de trayectoria</small>
+              </div>
+              <div class="about-num-card">
+                <strong>8</strong>
+                <small>Ciudades de Colombia</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <span class="eyebrow">Quiénes somos</span>
+          <h2>Más que contadores,<br /><span class="gradient-text">somos tu aliados.</span></h2>
+          <p>Alianza Financiera S.A.S nació con una convicción: las empresas colombianas merecen asesoría financiera de calidad, sin importar su tamaño. Desde 2012 hemos acompañado a emprendedores, pymes y corporaciones en su camino hacia la solidez financiera.</p>
+          <p>Nuestro equipo de contadores públicos, financieros y especialistas tributarios trabaja con una metodología clara: entender tu negocio primero, luego diseñar la estrategia financiera que necesitas.</p>
+          <div class="about-values">
+            <div class="value-item">
+              <i class="fas fa-eye"></i>
+              <div>
+                <strong>Transparencia total</strong>
+                <small>Sin letra pequeña. Sabes exactamente qué hacemos y por qué.</small>
+              </div>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-bolt"></i>
+              <div>
+                <strong>Respuesta ágil</strong>
+                <small>Tiempo de respuesta menor a 4 horas en días hábiles.</small>
+              </div>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-lock"></i>
+              <div>
+                <strong>Confidencialidad</strong>
+                <small>Tu información financiera protegida con los más altos estándares.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/573000000000" class="whatsapp" target="_blank">
-    💬
-</a>
+  <!-- ░░░ PROCESO ░░░ -->
+  <section class="section process-section" id="proceso">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2>Simple, claro<br /><span class="gradient-text">y sin sorpresas</span></h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal" data-delay="0">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Diagnóstico gratuito</h3>
+            <p>Analizamos tu situación financiera actual y tributaria sin costo. Identificamos oportunidades y riesgos.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step reveal" data-delay="1">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Propuesta a medida</h3>
+            <p>Diseñamos un plan de trabajo específico para tu empresa con alcance, entregables y tarifas claras.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step reveal" data-delay="2">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Implementación</h3>
+            <p>Ejecutamos con rigor y te mantenemos informado en cada etapa del proceso.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step reveal" data-delay="3">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>Seguimiento continuo</h3>
+            <p>No desaparecemos. Monitoreo permanente, alertas de vencimientos y actualizaciones normativas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-    <p>© 2026 Alianza Financiera S.A.S</p>
-</footer>
+  <!-- ░░░ CONTACTO ░░░ -->
+  <section class="section contact-section" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <span class="eyebrow">Hablemos</span>
+          <h2>¿Listo para poner<br /><span class="gradient-text">tus finanzas en orden?</span></h2>
+          <p>La primera consulta es gratuita y sin compromiso. Cuéntanos sobre tu empresa y te damos un diagnóstico honesto.</p>
+          <div class="contact-details">
+            <a href="tel:+573001234567" class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+57 300 123 4567</span>
+            </a>
+            <a href="mailto:info@alianzafinanciera.com.co" class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@alianzafinanciera.com.co</span>
+            </a>
+            <div class="contact-item">
+              <i class="fas fa-location-dot"></i>
+              <span>Bogotá, Colombia · Atención virtual nacional</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required />
+              </div>
+              <div class="form-group">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Mi Empresa S.A.S" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="juan@empresa.com" required />
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono / WhatsApp</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="servicio">Servicio de interés</label>
+              <select id="servicio" name="servicio">
+                <option value="">Selecciona un servicio</option>
+                <option>Contabilidad General</option>
+                <option>Asesoría Tributaria</option>
+                <option>Asesoría Financiera</option>
+                <option>Nómina & RRHH</option>
+                <option>Revisoría Fiscal</option>
+                <option>Creación de Empresa</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Cuéntanos sobre tu empresa</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente tu necesidad..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Enviar consulta <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-circle-check"></i>
+            <h3>¡Mensaje enviado!</h3>
+            <p>Te contactaremos en menos de 4 horas hábiles. Revisa también tu correo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script src="script.js"></script>
+  <!-- ░░░ FOOTER ░░░ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="logo.png" alt="Alianza Financiera S.A.S" class="footer-logo" />
+            <p>Asesoría financiera, contable y tributaria con el respaldo de más de una década de experiencia en Colombia.</p>
+            <div class="social-links">
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul>
+              <li><a href="#servicios">Contabilidad General</a></li>
+              <li><a href="#servicios">Asesoría Tributaria</a></li>
+              <li><a href="#servicios">Asesoría Financiera</a></li>
+              <li><a href="#servicios">Nómina & RRHH</a></li>
+              <li><a href="#servicios">Revisoría Fiscal</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Empresa</h4>
+            <ul>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#proceso">Nuestro proceso</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+              <li><a href="#">Política de privacidad</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul class="footer-contact">
+              <li><i class="fas fa-phone"></i> +57 300 123 4567</li>
+              <li><i class="fas fa-envelope"></i> info@alianzafinanciera.com.co</li>
+              <li><i class="fas fa-location-dot"></i> Bogotá, Colombia</li>
+              <li><i class="fas fa-clock"></i> Lun–Vie 8am–6pm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2024 Alianza Financiera S.A.S. Todos los derechos reservados.</p>
+        <p>Contadores Públicos certificados · NIT 900.XXX.XXX-X</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ░░░ WHATSAPP BUTTON ░░░ -->
+  <a href="https://wa.me/573001234567?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios." class="whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">¡Escríbenos!</span>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
