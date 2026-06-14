@@ -1,0 +1,162 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    background:#020617;
+    position:fixed;
+    width:100%;
+    top:0;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#22c55e;
+}
+
+.menu-toggle{
+    display:none;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#1e3a8a,#16a34a);
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.btn{
+    background:#22c55e;
+    padding:12px 25px;
+    border-radius:5px;
+    text-decoration:none;
+    color:white;
+}
+
+/* SERVICIOS */
+#servicios{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* NOSOTROS */
+#nosotros{
+    padding:80px 20px;
+    text-align:center;
+}
+
+/* CONTACTO */
+#contacto{
+    padding:80px 20px;
+    text-align:center;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    max-width:400px;
+    margin:auto;
+}
+
+input,textarea{
+    margin:10px 0;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:20px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:60px;
+        right:0;
+        background:#020617;
+        width:200px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .cards{
+        flex-direction:column;
+    }
+}
